@@ -99,85 +99,85 @@ class Paper {
       paper.style.zIndex = highestZ;
       highestZ +=1;
 
-//       this.touchX = e.touches[0].clientX;
-//       this.touchY = e.touches[0].clientY;
+      this.touchX = e.touches[0].clientX;
+      this.touchY = e.touches[0].clientY;
 
-//       if(e.touches.length === 1) {
-//         this.mouseTouchX = this.mouseX;
-//         this.mouseTouchY = this.mouseY;
-//         this.prevMouseX = this.mouseX;
-//         this.prevMouseY = this.mouseY;
-//       }
-//       if(e.touches.length === 2) {
-//         this.rotating = true;
-//       }
-//     });
+      if(e.touches.length === 1) {
+        this.mouseTouchX = this.mouseX;
+        this.mouseTouchY = this.mouseY;
+        this.prevMouseX = this.mouseX;
+        this.prevMouseY = this.mouseY;
+      }
+      if(e.touches.length === 2) {
+        this.rotating = true;
+      }
+    });
 
-//     paper.addEventListener('mousedown', (e) => {
-//       if(this.holdingPaper) return; 
-//       this.holdingPaper = true;
+    paper.addEventListener('mousedown', (e) => {
+      if(this.holdingPaper) return; 
+      this.holdingPaper = true;
       
-//       paper.style.zIndex = highestZ;
-//       highestZ += 1;
+      paper.style.zIndex = highestZ;
+      highestZ += 1;
       
-//       if(e.button === 0) {
-//         this.mouseTouchX = this.mouseX;
-//         this.mouseTouchY = this.mouseY;
-//         this.prevMouseX = this.mouseX;
-//         this.prevMouseY = this.mouseY;
-//       }
-//       if(e.button === 2) {
-//         this.rotating = true;
-//       }
-//     });
+      if(e.button === 0) {
+        this.mouseTouchX = this.mouseX;
+        this.mouseTouchY = this.mouseY;
+        this.prevMouseX = this.mouseX;
+        this.prevMouseY = this.mouseY;
+      }
+      if(e.button === 2) {
+        this.rotating = true;
+      }
+    });
 
-//     window.addEventListener('touchend', () => {
-//       this.holdingPaper = false;
-//       this.rotating = false;
+    window.addEventListener('touchend', () => {
+      this.holdingPaper = false;
+      this.rotating = false;
   
-//     })
+    })
 
 
 
 
-//     paper.addEventListener('mousedown', (e) => {
-//       if(this.holdingPaper) return; 
-//       this.holdingPaper = true;
+    paper.addEventListener('mousedown', (e) => {
+      if(this.holdingPaper) return; 
+      this.holdingPaper = true;
       
-//       paper.style.zIndex = highestZ;
-//       highestZ += 1;
+      paper.style.zIndex = highestZ;
+      highestZ += 1;
       
-//       if(e.button === 0) {
-//         this.mouseTouchX = this.mouseX;
-//         this.mouseTouchY = this.mouseY;
-//         this.prevMouseX = this.mouseX;
-//         this.prevMouseY = this.mouseY;
-//       }
-//       if(e.button === 2) {
-//         this.rotating = true;
-//       }
-//     });
-//     window.addEventListener('mouseup', () => {
-//       this.holdingPaper = false;
-//       this.rotating = false;
-//     });
-//   }
-// }
+      if(e.button === 0) {
+        this.mouseTouchX = this.mouseX;
+        this.mouseTouchY = this.mouseY;
+        this.prevMouseX = this.mouseX;
+        this.prevMouseY = this.mouseY;
+      }
+      if(e.button === 2) {
+        this.rotating = true;
+      }
+    });
+    window.addEventListener('mouseup', () => {
+      this.holdingPaper = false;
+      this.rotating = false;
+    });
+  }
+}
 
 
-// const papers = Array.from(document.querySelectorAll('.paper'));
+const papers = Array.from(document.querySelectorAll('.paper'));
 
-// papers.forEach(paper => {
-//   const p = new Paper();
-//   p.init(paper);
-// });
+papers.forEach(paper => {
+  const p = new Paper();
+  p.init(paper);
+});
     
 
-// setTimeout(()=>{
-// alert("Play the Music ")
-// },2000)
+setTimeout(()=>{
+alert("Play the Music ")
+},2000)
    
-// setTimeout(()=>{
-// alert("Don't Forget to play the Music ")
-// },10000)
+setTimeout(()=>{
+alert("Don't Forget to play the Music ")
+},10000)
    
