@@ -66,38 +66,38 @@ class Paper {
         this.velY = this.mouseY - this.prevMouseY;
       }
         
-//       const dirX = e.touches[0].clientX - this.touchX;
-//       const dirY = e.touches[0].clientY - this.touchY;
-//       const dirLength = Math.sqrt(dirX*dirX+dirY*dirY);
-//       const dirNormalizedX = dirX / dirLength;
-//       const dirNormalizedY = dirY / dirLength;
+      const dirX = e.touches[0].clientX - this.touchX;
+      const dirY = e.touches[0].clientY - this.touchY;
+      const dirLength = Math.sqrt(dirX*dirX+dirY*dirY);
+      const dirNormalizedX = dirX / dirLength;
+      const dirNormalizedY = dirY / dirLength;
 
-//       const angle = Math.atan2(dirNormalizedY, dirNormalizedX);
-//       let degrees = 180 * angle / Math.PI;
-//       degrees = (360 + Math.round(degrees)) % 360;
-//       if(this.rotating) {
-//         this.rotation = degrees;
-//       }
+      const angle = Math.atan2(dirNormalizedY, dirNormalizedX);
+      let degrees = 180 * angle / Math.PI;
+      degrees = (360 + Math.round(degrees)) % 360;
+      if(this.rotating) {
+        this.rotation = degrees;
+      }
 
-//       if(this.holdingPaper) {
-//         if(!this.rotating) {
-//           this.currentPaperX += this.velX;
-//           this.currentPaperY += this.velY;
-//         }
-//         this.prevMouseX = this.mouseX;
-//         this.prevMouseY = this.mouseY;
+      if(this.holdingPaper) {
+        if(!this.rotating) {
+          this.currentPaperX += this.velX;
+          this.currentPaperY += this.velY;
+        }
+        this.prevMouseX = this.mouseX;
+        this.prevMouseY = this.mouseY;
 
-//         paper.style.transform = `translateX(${this.currentPaperX}px) translateY(${this.currentPaperY}px) rotateZ(${this.rotation}deg)`;
-//       }
-//     })
+        paper.style.transform = `translateX(${this.currentPaperX}px) translateY(${this.currentPaperY}px) rotateZ(${this.rotation}deg)`;
+      }
+    })
 
-//     paper.addEventListener('touchstart', (e) => {
-//       e.preventDefault();
-//       if(this.holdingPaper) return; 
-//       this.holdingPaper = true;
+    paper.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      if(this.holdingPaper) return; 
+      this.holdingPaper = true;
       
-//       paper.style.zIndex = highestZ;
-//       highestZ +=1;
+      paper.style.zIndex = highestZ;
+      highestZ +=1;
 
 //       this.touchX = e.touches[0].clientX;
 //       this.touchY = e.touches[0].clientY;
